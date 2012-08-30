@@ -35,4 +35,4 @@ grails.project.dependency.resolution = {
     }
 }
 
-grails.plugin.location.'module-core' = "../modules/module-core"
+grails.plugin.location.'module-all-core' = "../modules/module-all-core"
