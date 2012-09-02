@@ -1,3 +1,5 @@
+import com.foodible.auth.Authority
+
 grails.config.locations = ["file:${userHome}/.grails/${appName}-config.groovy"]
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
@@ -77,3 +79,19 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.foodible.user.User'
+grails.plugins.springsecurity.userLookup.usernamePropertyName = 'email'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.foodible.user.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.foodible.user.Role'
+grails.plugins.springsecurity.failureHandler.defaultFailureUrl = '/login/authfail?login_error=1'
+grails.plugins.springsecurity.apf.filterProcessesUrl = '/loginValidation'
+grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/dashboard'
+grails.plugins.springsecurity.securityConfigType = 'InterceptUrlMap'
+grails.plugins.springsecurity.interceptUrlMap = [
+        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/logout/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/loginValidation/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
+//        '/**': [Authority.ADMIN, 'IS_AUTHENTICATED_FULLY']
+]

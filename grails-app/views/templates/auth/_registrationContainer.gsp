@@ -1,13 +1,13 @@
 <div id="registrationContainer" class="row">
     <div class="span4 offset7">
-        <g:form>
+        <g:form controller="register" action="register">
             <div class="controls">
                 <label class="radio">
-                    <input type="radio" name="userType" value="COOK" checked>
+                    <input type="radio" name="authority" value="ROLE_COOK" checked>
                     <g:message code="auth.form.radio.cook.label"/>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="userType" value="USER" checked>
+                    <input type="radio" name="authority" value="ROLE_USER" checked>
                     <g:message code="auth.form.radio.user.label"/>
                 </label>
             </div>
