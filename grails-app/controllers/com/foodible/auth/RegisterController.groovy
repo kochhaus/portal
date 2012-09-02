@@ -2,10 +2,12 @@ package com.foodible.auth
 
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 import com.foodible.user.User
+import com.foodible.user.UserEnableBean
 
 class RegisterController  {
 
     def userService
+    def springSecurityService
 
     def register = { RegisterCommand command ->
 
@@ -24,11 +26,31 @@ class RegisterController  {
         render view: 'index', model: [emailSent: true]
     }
 
+    def ajaxSendDOIMail = {
+
+        if(springSecurityService.isLoggedIn()) {
+            User user = springSecurityService.currentUser
+            userService.sendDOIMail(user)
+        }
+
+    }
+
     def ajaxValidation = { RegisterCommand command ->
         if (command.hasErrors()) {
             render view: 'index', model: [command: command]
             return
         }
+    }
+
+    def enable = {
+
+        String token = params.token
+        if (!token) {
+            // todo: render enable error page
+        }
+        UserEnableBean bean = new UserEnableBean(token: params.token)
+        userService.enableAccount(bean)
+
     }
 
     /*

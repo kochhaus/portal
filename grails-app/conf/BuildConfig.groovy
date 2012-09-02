@@ -36,3 +36,4 @@ grails.project.dependency.resolution = {
 }
 
 grails.plugin.location.'module-all-core' = "../modules/module-all-core"
+grails.plugin.location.'module-all-mail' = "../modules/module-all-mail"
