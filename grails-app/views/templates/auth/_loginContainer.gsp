@@ -1,4 +1,4 @@
-<div id="loginContainer" class="row">
+<div id="loginContainer" class="row hide">
     <div class="span4 offset7" >
         <g:form>
             <div class="controls">

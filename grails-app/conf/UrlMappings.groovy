@@ -10,6 +10,9 @@ class UrlMappings {
         "/ajax/registerValidation"(controller: 'register', action: 'ajaxValidation')
         "/ajax/sendDOIMail"(controller: 'register', action: 'ajaxSendDOIMail')
 
+        /* profile */
+        "/profile"(controller: 'user', action: 'index')
+
         "/$controller/$action?/$id?"{
 			constraints {
 				// apply constraints here

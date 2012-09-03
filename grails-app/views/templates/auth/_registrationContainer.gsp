@@ -1,4 +1,4 @@
-<div id="registrationContainer" class="row">
+<div id="registrationContainer" class="row hide">
     <div class="span4 offset7">
         <g:form controller="register" action="register">
             <div class="controls">
