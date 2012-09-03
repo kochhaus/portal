@@ -1,14 +1,7 @@
 package com.foodible.auth
 
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 import com.foodible.user.User
-/**
- * Created with IntelliJ IDEA.
- * User: torben
- * Date: 31.08.12
- * Time: 00:42
- * To change this template use File | Settings | File Templates.
- */
+
 class RegisterCommand {
 
     String email

@@ -4,7 +4,7 @@
     <title></title>
     <meta name="layout" content="portal"/>
 
-    <g:javascript src="foodible/content/contentLoader.js"/>
+    <g:javascript src="src/content/contentLoader.js"/>
 </head>
 
 <body>

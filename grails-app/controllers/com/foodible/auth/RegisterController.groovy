@@ -1,8 +1,8 @@
 package com.foodible.auth
 
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 import com.foodible.user.User
 import com.foodible.user.UserEnableBean
+import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 class RegisterController  {
 

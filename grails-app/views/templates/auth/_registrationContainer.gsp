@@ -1,5 +1,5 @@
-<div id="registrationContainer" class="row hide">
-    <div class="span4 offset7">
+<div class="row">
+    <div class="span4">
         <g:form controller="register" action="register">
             <div class="controls">
                 <label class="radio">

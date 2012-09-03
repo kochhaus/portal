@@ -5,8 +5,6 @@
     <meta name="layout" content="portal"/>
 </head>
 <body>
-
-
     <div id="myCarousel" class="carousel slide">
         <!-- Carousel items -->
         <div class="carousel-inner">
@@ -19,9 +17,7 @@
         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-    <g:javascript>
-    $('.carousel').carousel()
-    </g:javascript>
+
 
     <div class="row">
         <div class="container">

@@ -1,5 +1,5 @@
-<div id="loginContainer" class="row hide">
-    <div class="span4 offset7" >
+<div class="row">
+    <div class="span4" >
         <g:form>
             <div class="controls">
                 <input type="text" class="span4"  name="email" placeholder="${g.message([code: 'auth.form.email.label'])}" >
