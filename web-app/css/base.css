@@ -1,0 +1,190 @@
+/*
+* -------------------------------------------------
+* generic
+* -------------------------------------------------
+*/
+.clearfix:before,.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}  
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+div {
+    background-color: transparent;	
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    width: 960px;
+    margin: 0px auto;
+    position: relative;
+}
+
+/*
+* -------------------------------------------------
+* content
+* -------------------------------------------------
+*/
+
+#container {
+    min-height: 100%;
+    z-index: 10;
+    padding-top: 250px;
+    padding-bottom: 40px;
+}
+
+/*
+* -------------------------------------------------
+* footer
+* -------------------------------------------------
+*/
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 135px;
+    background-color: #000000;
+    padding-top: 27px;
+}
+
+#footer .credits p,
+#footer a {
+    color: #e08101;
+    font-size: 12px;
+}
+
+#footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#footer .share,
+#footer .menu {
+    float: left;
+}
+
+#footer .credits {
+    float: right;
+}
+
+#footer .menu ul {
+    float: left;
+    margin: 7px 20px 0px 0px;
+}
+
+#footer .menu ul li a {
+    display: block;
+    height: 20px;
+}   
+
+#footer .share {
+    height: 117px;
+    background-image: url("../images/footer_separator.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+#footer .share ul {
+    margin: 35px 0px 0px 30px;  
+}
+
+#footer .share ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+#footer .share a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+}
+
+#footer .share a.gplus {
+   background-image: url("../images/share_gplus.png");  
+}
+
+#footer .share a.twitter {
+   background-image: url("../images/share_twitter.png");  
+}
+
+#footer .share a.facebook {
+   background-image: url("../images/share_facebook.png");  
+}
+
+#footer .credits .logo {
+    display: block;
+    background-image: url("../images/footer_logo.png");
+    width: 127px;
+    height: 66px;
+    float: right;    
+    margin-top: 10px;
+}
+
+#footer .credits p {
+    margin-top: 14px;   
+}
+    
+/*
+* -------------------------------------------------
+* header
+* -------------------------------------------------
+*/
+#header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 205px;
+    background-image: url("../images/header.png");
+    background-position: center;
+    z-index: 20;
+    background-color: transparent;
+}
+
+#header ul {
+    margin-left: 230px
+}
+
+#header ul li {
+    float: left;
+}
+
+#header ul li a {
+    display: block;
+    height: 34px;
+    padding: 14px 10px 0px 10px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px #b45000
+}
+
+#header ul li.active, #header ul li a:hover {
+    background-color: #b84e00;
+}

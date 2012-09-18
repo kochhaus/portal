@@ -5,9 +5,13 @@ import com.foodible.user.User
 class RegisterCommand {
 
     String email
+
     String password
-    String firstname
-    String lastname
+
+    String firstName
+
+    String lastName
+
     String authority
 
     static constraints = {
@@ -22,8 +26,8 @@ class RegisterCommand {
                 'registerCommand.authority.corrupted'
             }
         }
-        firstname blank: false, nullable: false
-        lastname blank: false, nullable: false
+        firstName blank: false, nullable: false
+        lastName blank: false, nullable: false
     }
 
 }
