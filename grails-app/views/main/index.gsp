@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div id="search" class="glass section">
+    <div id="search" class="glass">
         <div class="header">
             <h1>den chefkoch in die eigenen</h1>
 
@@ -21,7 +21,7 @@
         </form>
     </div>
 
-    <div id="about" class="glass section">
+    <div id="about" class="glass">
         <a href="" class="navigation left"></a>
         <a href="" class="navigation right"></a>
 

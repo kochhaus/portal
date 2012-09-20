@@ -1,4 +1,4 @@
-<div id="login-form" class="glass section top-down-animated">
+<div id="login-form" class="glass top-down-animated">
     <g:form>
         <div class="controls">
             <input type="text" class="span4"  name="email" placeholder="${g.message([code: 'auth.form.email.label'])}" >

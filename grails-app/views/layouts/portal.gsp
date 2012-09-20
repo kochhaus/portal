@@ -16,7 +16,7 @@
         <div id="carousel"></div>
         <div id="header">
             <div class="section">
-                <ul>
+                <ul id="main-menu">
                     <li>
                         <a href="#">How it works</a>
                     </li>
@@ -27,18 +27,21 @@
                         <a href="#">Join public events</a>
                     </li>
                     <li>
-                        <a href="#">Sign up</a>
+                        <a href="#" class="sign-up">Sign up</a>
                     </li>
                     <li>
-                        <a href="#" id="sign-in">Sign in</a>
+                        <a href="#" class="sign-in">Sign in</a>
                     </li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
         </div>
 	    <div id="container">
-            <g:render template="/templates/auth/loginForm" />
-            <g:layoutBody/>
+            <div class="section">
+                <g:render template="/templates/auth/loginForm" />
+                <g:render template="/templates/auth/registrationForm" />
+                <g:layoutBody/>
+            </div>
         </div>
 	    <div id="footer">
 	       <div class="section">

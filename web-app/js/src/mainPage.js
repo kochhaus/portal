@@ -2,30 +2,59 @@ G.$('mainPage');
 
 G.mainPage.MainPageController = G.Controller.create({
 
+    searchHidden: false,
+
     init: function() {
+        var that = this;
         this.initSearchSection();
         this.initAboutSection();
-        this.listen('menu.sign-in.on', 'hideSearch');
-        this.listen('login.form.hidden', 'showSearch');
+        this.listen('mainMenu.sign-in.on', 'hideSearchLogin');
+        this.listen('mainMenu.sign-in.off', function(){that.trigger('auth.loginForm.hide')});
+        this.listen('auth.loginForm.hidden', 'showSearch');
+
+        this.listen('mainMenu.sign-up.on', 'hideSearchRegister');
+        this.listen('mainMenu.sign-up.off', function(){that.trigger('auth.registrationForm.hide')});
+        this.listen('auth.registrationForm.hidden', 'showSearch');
     },
 
-    hideSearch: function(){
+    hideSearchRegister: function(){
+        this.hideSearch('auth.registrationForm.show');
+    },
+
+    hideSearchLogin: function(){
+        this.hideSearch('auth.loginForm.show');
+    },
+
+    hideSearch: function(event){
+        if (this.searchHidden){
+            this.trigger(event);
+            return;
+        }
+
         var that = this;
         $('#search').animate({top: -1000}, 200, function() {
+            that.searchHidden = true;
             that.trigger('mainPage.search.hidden');
+            that.trigger(event);
         });
+
     },
 
     showSearch: function(){
+        if (!this.searchHidden){
+            return;
+        }
+
         var that = this;
         $('#search').animate({top: 0}, 200, function() {
-            that.trigger('mainPage.search.showed');
+            that.searchHidden = false;
+            that.trigger('mainPage.search.shown');
         });
     },
 
     initAboutSection: function(){
-        var vieportHeight = $(window).height();
-        var offset = vieportHeight - 531 - 65;
+        var viewPortHeight = $(window).height();
+        var offset = viewPortHeight - 531 - 65;
         $('#about').css('margin-top', offset);
     },
 

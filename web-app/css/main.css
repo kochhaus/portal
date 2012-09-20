@@ -51,7 +51,9 @@
 }
 
 .top-down-animated {
+    position: absolute;
     top: -1000px;
+    z-index: 6;
 }
 
 /*

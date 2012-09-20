@@ -23,7 +23,7 @@ modules = {
 
         resource url: 'js/libs/jquery.backstretch.min.js'
         resource url: 'js/libs/select.js'
-        resource url: 'js/src/login.js'
+        resource url: 'js/src/auth.js'
         resource url: 'js/src/mainMenu.js'
         resource url: 'js/src/mainPage.js'
     }

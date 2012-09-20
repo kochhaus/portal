@@ -30,10 +30,10 @@ G.Controller = (function(){
     var eventBus = Ember.Object.create(Ember.Evented, {});
     return Ember.Object.extend({
         listen: function(eventName, listener){
-            if (eventName)
-            eventBus.on(eventName, this, listener);
+            eventName && eventBus.on(eventName, this, listener);
         },
         trigger: function(eventName, eventObject){
+            Ember.Logger.log('triggering event: ' + eventName + ' (' + eventObject + ')');
             eventBus.trigger(eventName, eventObject)
         }
     });
