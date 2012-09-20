@@ -36,6 +36,7 @@ div {
 
 a {
     text-decoration: none;
+    outline: none;
 }
 
 .section {

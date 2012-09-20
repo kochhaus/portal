@@ -6,17 +6,9 @@ G.mainMenu.MainController = G.Controller.create({
 
     init: function() {
         var that = this;
-        $('#main-menu .sign-up').click(function(){that.clickSingUp($(this))});
-        $('#main-menu .sign-in').click(function(){that.clickSingIn($(this))});
+        $('#main-menu .sign-up').click(function(){that.handleClick($(this))});
+        $('#main-menu .sign-in').click(function(){that.handleClick($(this))});
         this.activeNode = $('#main-menu li.active');
-    },
-
-    clickSingUp: function(element){
-        this.handleClick(element);
-    },
-
-    clickSingIn: function(element){
-        this.handleClick(element);
     },
 
     handleClick: function(element){

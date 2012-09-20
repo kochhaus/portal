@@ -1,9 +1,5 @@
 var G = G || {};
 
-/**
- * Allows to create namespace, e.g.: G.$('foo.bar.bas') == G.foo.bar.bas
- * @type {*}
- */
 G.$ = (function(namespace){
     var DELIMITER = '.';
     return function(namespacePath){
@@ -22,10 +18,6 @@ G.$ = (function(namespace){
     }
 })(G);
 
-/**
- * Controller object encapsulation event bus.
- * @type {*}
- */
 G.Controller = (function(){
     var eventBus = Ember.Object.create(Ember.Evented, {});
     return Ember.Object.extend({
