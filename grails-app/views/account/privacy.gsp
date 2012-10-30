@@ -1,3 +1,0 @@
-<div >
-PRIVACY - TODO
-</div>

@@ -11,7 +11,11 @@ class UrlMappings {
         "/ajax/sendDOIMail"(controller: 'register', action: 'ajaxSendDOIMail')
 
         /* profile */
-        "/profile"(controller: 'user', action: 'index')
+        "/account"(controller: 'account')
+        "/account/profile-settings"(controller: 'account', action: 'profileSettings')
+
+        /* other */
+        '/js/j18n'(controller: 'i18N')
 
         "/$controller/$action?/$id?"{
 			constraints {

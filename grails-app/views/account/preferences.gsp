@@ -1,3 +1,0 @@
-<div >
-PREFERENCES - TODO
-</div>

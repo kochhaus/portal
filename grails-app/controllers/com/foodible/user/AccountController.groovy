@@ -1,24 +1,14 @@
 package com.foodible.user
 
+import com.foodible.City
+
 class AccountController {
 
-    def ajaxIndex = {
-        render(view: 'index', status: 200)
-    }
+    static defaultAction = 'profileSettings'
 
-    def ajaxPreferences = {
-        render(view: 'preferences', status: 200)
-    }
-
-    def ajaxPayment = {
-        render(view: 'payment', status: 200)
-    }
-
-    def ajaxPrivacy = {
-        render(view: 'privacy', status: 200)
-    }
-
-    def ajaxMessaging = {
-        render(view: 'messaging', status: 200)
+    def profileSettings = {
+        return [
+            cities: City.list(sort:'name', order: 'asc')
+        ]
     }
 }

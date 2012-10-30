@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <meta name="layout" content="portal"/>
+    <r:require modules="mainPage"/>
 </head>
 
 <body>
