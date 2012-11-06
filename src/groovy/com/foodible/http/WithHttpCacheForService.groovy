@@ -24,7 +24,7 @@ class WithHttpCacheForService {
                 final WithHttpCacheFor annotation = element.getAnnotation(WithHttpCacheFor)
                 if (annotation) {
                     final String key = buildKey(controller.name, element.name)
-                    CACHE[key] = annotation.value().toLong()
+                    CACHE[key] = annotation.value().value
                 }
             }
         }

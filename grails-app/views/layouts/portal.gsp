@@ -5,7 +5,7 @@
         <title><g:layoutTitle default=":: CulinaryCrowd ::"/></title>
         <g:layoutHead/>
 		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="${createLink(controller: 'i18N')}"></script>
+        <js:i18nScript />
         <r:layoutResources/>
     </head>
 	<body>
