@@ -13,8 +13,11 @@ class AnnotationFilters {
                 if (cacheTime != WithHttpCacheForService.NO_CACHE){
                     long current = System.currentTimeMillis();
                     long expires = current + cacheTime;
-                    response.addDateHeader("Expires", expires);
-                    response.addDateHeader("Last-Modified", current);
+                    int maxAge = Math.round(cacheTime / 1000)
+                    response.addHeader('Cache-Control', 'Public')
+                    response.addIntHeader('max-age', maxAge);
+                    response.addDateHeader('Expires', expires);
+                    response.addDateHeader('Last-Modified', current);
                 }
             }
         }

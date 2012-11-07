@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <meta name="layout" content="portal"/>
+    <script type="text/javascript" src="${g.createLink(controller: 'jsData', action: 'mainPage')}"></script>
     <r:require modules="mainPage"/>
 </head>
 
