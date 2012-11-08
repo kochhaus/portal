@@ -1,0 +1,569 @@
+/*****************************
+* base
+******************************/
+body, #container {
+    background-image: url('../images/account/background.png');	
+    background-repeat: repeat-x;
+    background-color: #e8e8e8;
+}
+
+#container {
+    padding-top: 220px;
+}
+
+/*****************************
+* generic
+******************************/
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.separator {
+    background-image: url('../images/account/separator.png');
+    background-position: bottom;
+    background-repeat: repeat-x;
+    padding-bottom: 20px;    
+}
+
+.rb {
+    border-radius: 5px;
+}
+
+.border {
+    border: 1px solid #d0d0d0;
+    padding: 20px;
+}
+
+.panel {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 1px #888;
+}
+
+/*****************************
+* page related form elements
+******************************/
+
+.topbar {
+    background-image: url('../images/account/topbar_bcg.png');    
+    background-repeat: repeat-x;
+    height: 65px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 101;
+}
+
+.topbar ul {
+    position: absolute;
+    top: 22px;	
+}
+
+.topbar ul.progress {
+	left: 20px;
+}
+
+.topbar ul.info {
+    right: 0px;
+}
+
+.topbar ul.info li {
+    position: relative;
+}
+
+.topbar ul.info li a.question {
+    position: absolute;
+    left: -40px;
+    top: -6px;
+}
+
+.topbar h1 {
+    text-transform: uppercase;  
+}
+
+.topbar ul.progress h1 {
+    color: #ffffff;
+}
+
+.topbar ul.info h1 {
+	color: #e28001;
+}
+
+.topbar li:first-child { 
+    margin-right: 20px;	
+}
+	
+.topbar li{
+    float: left;    	
+    margin-right: 10px;
+}
+
+.topbar li span {
+    font-weight:  bold;
+    color: #e38001;	
+}
+
+.question {
+    display: block;
+    width: 33px;
+    height: 33px;
+    background-image: url('../images/account/question.png');
+    background-repeat:  no-repeat;
+    background-position: center;
+}
+
+/*****************************
+* progress bar
+******************************/
+
+div.progress {
+    background-image: linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+	background-image: -o-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+	background-image: -moz-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+	background-image: -webkit-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+	background-image: -ms-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+	box-shadow: inset 1px 1px 2px 0px #707070;
+    -webkit-box-shadow: inset 1px 1px 2px 0px #707070;
+    -moz-box-shadow: inset 1px 1px 2px 0px #707070;
+    -o-box-shadow: inset 1px 1px 2px 0px #707070;
+	
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.09, rgb(211,211,211)),
+	    color-stop(0.55, rgb(252,252,252))
+	);
+	
+	background-color: #ffffff;
+	
+	width: 190px;
+	height: 10px;
+	padding: 6px 5px 5px 5px;        
+}
+
+div.progress div {
+    height: 10px; 
+    width: 20%;
+    background-image: url('../images/account/progress_bar.png'); 
+    background-repeat: repeat-x;
+}
+
+/*****************************
+* hello section
+******************************/
+
+#hello {
+    position: absolute;
+    top:-70px;
+    left: 0px;
+}
+
+#hello h1 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;	
+}
+
+#hello span {
+    font-size: 16px;    
+}
+
+#hello a {
+	font-size: 16px;
+    color: #bb4d00;
+    text-transform: uppercase; 
+}
+
+#hello a.nach {
+    padding: 0px 10px 0px 20px;
+    border-right: 1px solid #b9b9b9;
+}
+
+#hello a.logout {
+    padding-left: 10px   
+}
+
+/*****************************
+* sub menu
+******************************/
+
+#sub-menu {
+    position: absolute;
+    top:-50px;
+    right: 0px;
+    z-index: 100;
+    background: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+    height: 55px;     
+}
+
+#sub-menu li:first-child {
+    border-left: none;
+}
+
+#sub-menu li {
+    float: left;
+    border-left: 1px solid #d0d0d0;
+}
+
+#sub-menu li a {
+    cursor: pointer;
+    height: 50px;
+    padding: 16px 33px 0px 33px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b64f04;
+}
+
+#sub-menu li a.selected {
+    color: #000000;
+    background-image: linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+    background-image: -o-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+    background-image: -moz-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+    background-image: -webkit-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+    background-image: -ms-linear-gradient(bottom, rgb(211,211,211) 9%, rgb(252,252,252) 55%);
+    border-radius: 5px 5px 0px 0px;
+}
+
+/*****************************
+* form related form elements
+******************************/
+
+.forms {
+    padding: 0px 30px;
+}
+
+.forms .info {
+    font-size: 14px;      	
+} 
+
+.forms h1 {
+    background-image: url('../images/account/dot.png');    
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 17px;
+    margin: 20px 0px 20px 0px;
+    font-size: 18px;
+}
+
+.forms label {
+    text-transform: uppercase;	
+}
+
+.forms label.required {
+    background-image: url('../images/account/required.png');
+    background-repeat:no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+}
+
+.checkbox {
+    height: 28px;
+    padding: 5px 0px 0px 40px;
+    background-image: url('../images/account/checkbox_off.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.checkbox.on {
+    background-image: url('../images/account/checkbox_on.png');
+}
+
+.checkbox.white.on {
+    background-image: url('../images/account/checkbox_white_on.png');
+}
+
+.forms input[type=text] {
+    width:420px;
+    height:37px;
+    border: none;
+    box-shadow: inset 1px 1px 6px 0px #707070;
+    -webkit-box-shadow: inset 1px 1px 6px 0px #707070;
+    -moz-box-shadow: inset 1px 1px 6px 0px #707070;
+    -o-box-shadow: inset 1px 1px 6px 0px #707070;
+    background-color: #ededed;
+    padding: 0px 10px 0px 10px;
+    margin: 5px 0px 10px 0px;
+}
+
+.forms div.dd-select {
+    border-radius: 5px;
+    border: none; 
+    height: 37px;
+    box-shadow: inset 1px 1px 6px 0px #707070;
+    -webkit-box-shadow: inset 1px 1px 6px 0px #707070;
+    -moz-box-shadow: inset 1px 1px 6px 0px #707070;
+    -o-box-shadow: inset 1px 1px 6px 0px #707070;
+    margin: 5px 0px 10px 0px;
+}
+
+input[type=button].save {
+    background-color: #b84e00;
+    border: none;
+    color: #ffffff;
+    text-transform:uppercase; 
+    font-weight: bold;   
+    padding: 5px 24px;
+    cursor: pointer;
+}
+
+.dd-pointer-down {
+    display: none;    
+}
+
+div.dd-select a {
+    padding: 7px 10px 0px 10px;
+    background-image: url("../images/account/search_small_thingi.png");
+    background-repeat: no-repeat;
+    background-position: 410px 15px;
+}
+
+.dd-container a,
+.dd-container label {
+    color: #000000;
+    font-weight: normal;     
+}
+    
+.dd-options  {
+    background-color: #ededed;
+    box-shadow: none;
+    border:1px solid #ededed;
+    margin-left: 1px;   
+    border-radius: 5px;
+}
+
+.dd-options > li:last-child > .dd-option {
+    border-bottom: none;
+}
+
+.dd-option  {
+    border-bottom: 1px solid #424242;     
+}
+
+a.dd-option {
+   background-color: transparent;     
+}
+
+ul li a:hover label {
+    color:#e38000;           
+}
+
+.dd-option-selected {
+    background-color: #000000;
+}
+
+/*****************************
+* main section
+******************************/
+
+#main ul.type {
+    margin-top: 10px;
+    width: 100%;	
+}	
+#main ul.type li {
+    display: block;
+    width: 33%;
+}
+
+#main ul.type li div.checkbox {
+    margin-bottom: 10px;	
+}	
+
+#main ul.type li div.checkbox:last-child {
+    margin-bottom: 0px;
+}
+
+/*****************************
+* offer section
+******************************/
+
+#offer .border .checkbox,
+#offer .border .question {
+    float: left;
+}
+
+#offer .border .header .checkbox label {
+    font-weight: bold;
+    
+}
+
+#offer .border .body .checkbox label {
+    text-transform: none;
+}
+
+#offer .border .question {
+	margin-left: 10px;	
+}
+
+#offer .border .body {
+    margin-top: 10px;
+}
+
+#offer .border .body li {
+    float:left;	
+}
+
+#offer .border .body ul li {
+    padding-top: 5px;
+    width: 170px;
+}
+
+#offer .border .body ul li:first-child {
+	padding-top: 10px;
+	width: 235px;
+}
+
+#offer .border .body ul.dd-options li {
+    padding-top: 0px;
+    width: 69px;
+    background-position: 0px 15px;
+}
+
+#offer .border .body div.dd-select a {
+    background-position: 45px 15px;
+}
+
+#offer .border {
+    margin-bottom: 20px	
+}
+
+#offer .border:last-child {
+    margin-bottom: 0px 
+}
+
+/*****************************
+* interview section
+******************************/
+
+#interview .inquiry {
+    position: relative;
+}
+
+#interview .inquiry label {
+    text-transform: none;	
+}
+
+#interview .inquiry textarea {
+    margin: 10px 0px 17px 0px;
+    display: block;
+    width: 880px;
+    height: 92px;
+    resize:none; 
+    box-shadow: inset 1px 1px 6px 0px #707070;
+    -webkit-box-shadow: inset 1px 1px 6px 0px #707070;
+    -moz-box-shadow: inset 1px 1px 6px 0px #707070;
+    -o-box-shadow: inset 1px 1px 6px 0px #707070;
+    background-color: #ededed;
+    padding: 10px;
+    border: none;
+    overflow: hidden;  	
+}
+
+#interview .inquiry div {
+    position: absolute;
+    width: 28px;
+    height: 25px;
+    background-image: url("../images/account/txt_area_tongue.png");
+    top: 50px;
+    left: -20px;    
+}
+
+#interview .questionary .border {
+    width: 398px; 
+    margin-top: 10px;       
+}
+
+#interview .questionary .border ul:first-child {
+    margin: 0px;	
+}
+
+#interview .questionary .border ul {
+    margin:10px 0px 0px 0px;	
+}
+
+#interview .questionary .border ul:last-child {
+    margin-bottom: 0px;	
+}	
+
+#interview .questionary .border li {
+    float: left;
+    width: 170px;            	   
+}
+
+#interview .questionary .border li:last-child {
+    float: right	
+}	
+
+#interview .questionary  label,
+#interview .questionary .border li .checkbox label {
+    text-transform: none;
+}
+
+#interview .questionary .border li.or {
+    width: 0px;
+    text-transform: uppercase;
+    padding-top: 5px;
+}
+
+/*****************************
+* picture section
+******************************/
+
+#picture {
+    padding-bottom: 30px;
+}
+
+#picture .upload, 
+#picture .image {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    height: 148px;
+}
+
+#picture .upload .field {
+    height: 31px;
+    background-image: url("../images/account/upload_bcg.png");
+    padding: 2px 14px 0px 7px; 	
+    background-repeat: repeat-x;
+    margin-bottom: 15px;
+}
+
+#picture .upload .field input[type=text]{
+    height: 19px;
+    width: 160px;
+}
+
+#picture .upload .field input[type=button]{
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: #e38000;
+    cursor: pointer;
+    margin-left: 14px; 
+}
+
+#picture .upload input[type=button].save {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+#picture .image img {
+    border: 4px solid #ffffff;
+    outline: 1px solid #d0d0d0;	
+}
+
+
+
+
+
+

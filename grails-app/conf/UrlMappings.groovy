@@ -11,8 +11,8 @@ class UrlMappings {
         "/ajax/sendDOIMail"(controller: 'register', action: 'ajaxSendDOIMail')
 
         /* profile */
-        "/account"(controller: 'account')
-        "/account/profile-settings"(controller: 'account', action: 'profileSettings')
+        "/cook"(controller: 'cook')
+        "/cook/profile-settings"(controller: 'cook', action: 'profileSettings')
 
         /* other */
         '/js/j18n'(controller: 'i18N')

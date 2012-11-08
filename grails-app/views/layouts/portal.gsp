@@ -40,8 +40,8 @@
             <div class="section">
                 <g:render template="/templates/auth/loginForm" />
                 <g:render template="/templates/auth/registrationForm" />
-                <g:layoutBody/>
             </div>
+            <g:layoutBody/>
         </div>
 	    <div id="footer">
 	       <div class="section">

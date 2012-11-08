@@ -32,9 +32,10 @@ modules = {
     }
 
     profileSettings {
-        dependsOn 'framework, select2'
-        resource url: 'css/profileSettings.css'
+        dependsOn 'framework'
+        resource url: 'css/account.css'
         resource url: 'js/src/auth.js'
+        resource url: 'js/libs/select.js'
         resource url: 'js/src/mainMenu.js'
         resource url: 'js/src/account/profileSettingsPage.js'
     }

@@ -1,9 +1,9 @@
 package com.foodible.js
 
-import com.foodible.City
-import com.foodible.ServiceType
 import com.foodible.http.CacheFor
 import com.foodible.http.WithHttpCacheFor
+import com.foodible.service.City
+import com.foodible.service.ServiceType
 
 class JsDataController {
 
